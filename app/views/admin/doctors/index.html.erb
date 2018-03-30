@@ -1,0 +1,51 @@
+<div class="jumbotron">
+  <h1 class="display-4">Doctors</h1>
+  <%= link_to 'Create New Doctor', new_admin_doctor_path, class: "btn btn-primary" %>
+  <hr class="my-4">
+</div>
+<div class="container">  
+  <p id="notice"><%= notice %></p>
+  <table class="table table-bordered" id="doctors">
+    <thead>
+      <tr>
+        <th>Photo</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Contact</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @doctors.each do |doctor| %>
+        <tr>
+          <td class="doctor-image-td"><%= image_tag doctor.profile_photo_url %></td>
+          <td><%= doctor.name %></td>
+          <td><%= doctor.full_address %></td>
+          <td><%= doctor.contact %></td>
+          <td><%= doctor.age %></td>
+          <td><%= doctor.gender %></td>
+          <td>
+            <%= link_to admin_doctor_path(doctor), class: "btn btn-primary btn-sm" do %>
+              <i class="fa fa-eye"></i>
+            <% end %>    
+            <%= link_to edit_admin_doctor_path(doctor), class: "btn btn-warning btn-sm" do %>
+              <i class="fa fa-pencil"></i>
+            <% end %>
+            <%= link_to admin_doctor_path(doctor), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-sm" do %>
+              <i class="fa fa-trash"></i>
+            <% end %>
+            </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#doctors').DataTable();
+  });
+</script>

@@ -59,3 +59,6 @@ gem 'jquery-rails'
 gem "font-awesome-rails"
 gem 'geocoder'
 gem 'carrierwave', '~> 1.0'
+gem 'ckeditor'
+gem 'devise'
+gem 'ransack'

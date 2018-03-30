@@ -1,0 +1,75 @@
+<div class="jumbotron">
+  <h1 class="display-4">Hello, world!</h1>
+  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  <hr class="my-4">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+  </p>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-7">
+      <div class="list-group">
+        <% @doctors.each do |doctor| %>
+          <div class="list-group-item">
+            <div class="row">
+              <div class="col-md-5">
+                <%= image_tag doctor.profile_photo_url, style: "width:100%;height:200px;" %>
+              </div>
+              <div class="col-md-7">
+                <h6><%= doctor.name %></h6>
+                <h6><%= doctor.full_address %></h6>
+                <h6><%= doctor.contact %></h6>
+                <h6><%= doctor.gender %></h6>
+                <%= link_to doctor_path(doctor), class: "btn btn-primary" do %>
+                  <i class="fa fa-eye"></i> View
+                <% end %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <div id="map-canvas" style="width:100%;height:500px;"></div>
+    </div>
+  </div>
+</div>
+
+<script 
+  async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAC1cqAmyA4B5g45X12AYT61H3XLUzUQxs">
+</script>
+<script type="text/javascript">
+
+  var locations = [];
+  <% @doctors.each do |doctor| %>
+    locations.push(["<%= doctor.address %>", <%= doctor.latitude %>, <%= doctor.longitude %>])
+  <% end %>
+
+  var map = new google.maps.Map(document.getElementById('map-canvas'), {
+    zoom: 10,
+    center: new google.maps.LatLng(locations[0][1], locations[0][2]),
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  });
+
+  var infowindow = new google.maps.InfoWindow();
+
+  var marker, i;
+
+  for (i = 0; i < locations.length; i++) { 
+    marker = new google.maps.Marker({
+      position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+      map: map
+    });
+
+    google.maps.event.addListener(marker, 'click', (function(marker, i) {
+      return function() {
+        infowindow.setContent(locations[i][0]);
+        infowindow.open(map, marker);
+      }
+    })(marker, i));
+  }
+</script>

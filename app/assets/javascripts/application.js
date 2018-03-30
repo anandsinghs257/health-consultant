@@ -11,8 +11,10 @@
 // about supported directives.
 //
 //= require jquery3
+//= require jquery_ujs
 //= require popper
 //= require bootstrap
 //= require dataTables.bootstrap4.min
 //= require jquery.dataTables.min
+//= require ckeditor/init
 //= require turbolinks

@@ -1,0 +1,26 @@
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="specializationModalLabel">Add Specializations</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <%= form_for :specialization_area, url: :create_specializations_for_doctor_admin_doctors, method: :post do |f| %>
+        <%= f.hidden_field :doctor_id, value: @doctor.id %>
+        <div class="row">  
+          <% for specialization_area in SpecializationArea.all %>
+            <div class="col-md-6">
+              <label>  
+                <%= check_box_tag "specialization_area[specialization_area_ids][]", specialization_area.id %>
+                <%= specialization_area.name %>
+              </label>
+            </div>
+          <% end %>
+        </div>
+        <%= f.submit "Submit", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>

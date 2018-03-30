@@ -1,4 +1,7 @@
 class Doctor < ApplicationRecord
+  has_many :doctor_specializations
+  has_many :specialization_areas, through: :doctor_specializations
+  
   geocoded_by :full_address
   after_validation :geocode
 

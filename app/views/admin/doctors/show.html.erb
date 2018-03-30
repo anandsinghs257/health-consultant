@@ -1,0 +1,69 @@
+<div class="jumbotron">
+  <h1 class="display-4">Get your doctor!</h1>
+  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  <hr class="my-4">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="#" role="button">Make an Appointment</a>
+  </p>
+</div>
+<div class="container">
+  <%= link_to add_specialization_to_doctor_admin_doctors_path(doctor_id: @doctor.id), class: "btn btn-primary btn-add", remote: true, "data-toggle" => "modal", "data-target" => "#specializationModal" do %>
+    <i class="fa fa-plus"></i> Add Specialization
+  <% end %>
+  <div class="row">
+    <div class="col-md-8 col-xs-12 col-sm-7">
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-5">
+              <%= image_tag @doctor.profile_photo_url, class: "doctor-profile-img" %>
+            </div>
+            <div class="col-md-7">
+              <h3 class="card-title"><%= @doctor.name %></h3>
+              <p class="card-text doctor-about"><%= @doctor.about %></p>
+              <h5 class="doctor-items"><i class="fa fa-phone"></i> <%= @doctor.contact %></h5>
+              <h5 class="doctor-items"><i class="fa fa-map-marker"></i> <%= @doctor.full_address %></h5>
+              <h5 class="doctor-items"><i class="fa fa-list"></i>
+                <% @doctor.specialization_areas.map {|sa| sa.name}.flatten.each do |specialization| %>
+                  <%= specialization %>,   
+                <% end %>
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-xs-12 col-sm-5">
+      <div id="map"></div>
+    </div>
+  </div>
+  <%= link_to edit_admin_doctor_path(@doctor), class: "btn btn-warning" do %>
+    <i class="fa fa-pencil"></i> Edit
+  <% end %> |
+  <%= link_to admin_doctors_path, class: "btn btn-primary" do %>
+    <i class="fa fa-arrow-left"></i> Back
+  <% end %>
+</div>
+
+
+<script>
+  function initMap() {
+    var doctor_address = {lat: <%= @doctor.latitude %>, lng: <%= @doctor.longitude %>};
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 12,
+      center: doctor_address
+    });
+    var marker = new google.maps.Marker({
+      position: doctor_address,
+      map: map
+    });
+  }
+</script>
+<script 
+  async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAC1cqAmyA4B5g45X12AYT61H3XLUzUQxs&callback=initMap">
+</script>
+
+<div class="modal fade" id="specializationModal" tabindex="-1" role="dialog" aria-labelledby="specializationModal" aria-hidden="true">
+</div>
