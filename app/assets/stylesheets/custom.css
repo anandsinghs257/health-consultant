@@ -1,0 +1,9 @@
+.nav-app-header a {color:#fff !important;}
+.search-box {margin-top:5% !important;}
+.search-card .form-control, .search-card .btn {border-radius: 0px;}
+@media screen and (max-width:767px) {
+	.search-box {width:100%;}
+}
+@media screen and (min-width:768px) {
+	.search-box {width:60%;margin:0 auto;}
+}
