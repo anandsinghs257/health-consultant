@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @doctor.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @doctor.last_name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @doctor.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @doctor.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @doctor.state %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @doctor.country %>
+</p>
+
+<p>
+  <strong>Zipcode:</strong>
+  <%= @doctor.zipcode %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @doctor.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @doctor.longitude %>
+</p>
+
+<p>
+  <strong>Contact:</strong>
+  <%= @doctor.contact %>
+</p>
+
+<p>
+  <strong>Profile photo:</strong>
+  <%= @doctor.profile_photo %>
+</p>
+
+<p>
+  <strong>About:</strong>
+  <%= @doctor.about %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @doctor.age %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @doctor.gender %>
+</p>
+
+<%= link_to 'Edit', edit_doctor_path(@doctor) %> |
+<%= link_to 'Back', doctors_path %>

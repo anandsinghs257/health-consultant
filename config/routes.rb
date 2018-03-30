@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :doctors
   resources :specialization_areas
   root to: 'home#index'
 
