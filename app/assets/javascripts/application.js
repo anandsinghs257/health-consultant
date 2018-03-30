@@ -13,4 +13,6 @@
 //= require jquery3
 //= require popper
 //= require bootstrap
+//= require dataTables.bootstrap4.min
+//= require jquery.dataTables.min
 //= require turbolinks
