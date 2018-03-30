@@ -5,3 +5,87 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+specialization_areas = SpecializationArea.create([
+	{
+    name: "Anesthesiologists", 
+    description: "These doctors give you drugs to numb your pain or to put you under during surgery, childbirth, or other procedures. They monitor your vital signs while you’re under anesthesia."
+  },
+  {
+    name: "Cardiologists",
+    description: "They’re experts on the heart and blood vessels. You might see them for heart failure, a heart attack, high blood pressure, or an irregular heartbeat."
+  },
+  {
+    name: "Colon and Rectal Surgeons",
+    description: "You would see these doctors for problems with your small intestine, colon, and bottom. They can treat colon cancer, hemorrhoids, and inflammatory bowel disease. They also can do a colonoscopy and other tests for colon cancer."
+  }, 
+  {
+    name: "Dermatologists",
+    description: "Have problems with your skin, hair, nails? Do you have moles, scars, acne, or skin allergies? Dermatologists can help."
+  },
+  {
+    name: "Endocrinologists",
+    description: "These are experts on hormones and metabolism. They can treat conditions like diabetes, thyroid problems, infertility, and calcium and bone disorders."
+  },
+  {
+    name: "Family Physicians ",
+    description: "They care for the whole family, including children, adults, and the elderly. They do routine checkups and screening tests, give you flu and immunization shots, and manage diabetes and other ongoing medical conditions."
+  },
+  {
+    name: "Gastroenterologists",
+    description: "They’re specialists in digestive organs, including the stomach, bowels, pancreas, liver, and gallbladder. You might see them for abdominal pain, ulcers, diarrhea, jaundice, or cancers in your digestive organs."
+  },
+  {
+    name: "Geriatric Medicine Specialists ",
+    description: "These doctors care for the elderly. They can treat people in their homes, doctors' offices, nursing homes, assisted-living centers, and hospitals."
+  },
+  {
+    name: "Emergency Medicine Specialists",
+    description: "These doctors make life-or-death decisions for sick and injured people, usually in an emergency room. Their job is to save lives and to avoid or lower the chances of disability."
+  },
+  {
+    name: "Immunologist",
+    description: "An immunologist is a medical professional who investigates and studies the physiological processes and functions of the body’s immune system. This knowledge is then applied in the diagnosis and treatment of a range of diseases that affect the said system."
+  },
+  {
+    name: "Infectious Disease Specialist",
+    description: "Infectious disease specialist (medical doctor) who treats and diagnose complex infections such as HIV or TB. Check out the top 15 deadliest bacterial diseases here."
+  },
+  {
+    name:"Neonatologist",
+    description: "A neonatologist is a type of pediatrician who specializes in the medical care of newborn infants, particularly the critically ill premature and full-time newborn infants."
+  },
+  {
+    name:"Nephrologist",
+    description: "Nephrologists are trained medical doctors in the diagnosis and treatment of diseases of the kidney and urinary systems, such as inflammation of the kidneys, kidney biopsy, dialysis, chronic kidney disease, or cancer. For kids, there are pediatric nephrologists, who only treat children."
+  },
+  {
+    name:"Neurologist",
+    description: "A neurologist is a doctor who specializes in the diagnosis and treatment of the diseases that affect the nervous system (brain, spinal cord, and the neurons). For instance, people who are dealing with problems with their senses may also consult a neurologist because such problems may sometimes be caused by disorders of the system. A Clinical Neurophysiologist is a specialized with neurology who diagnoses any difficulty dealing with the central, peripheral and autonomic nervous system with the aid of electrophysiological tests."
+
+  },
+  {
+    name:"Neurosurgeon",
+    description: "Although they also deal with the diagnosis and treatment of nervous system disorders like what neurologists do, neurosurgeons are licensed to operate and perform surgeries on the patient’s brain."
+  },
+  {
+    name:"Ophthalmologist",
+    description: "Unlike optometrists, who are also “eye doctors”, ophthalmologists can perform surgeries in the eyes. And because they can perform operations on the eyes, they are considered as both medical and surgical specialists."
+  },
+  {
+    name:"Plastic Surgeon",
+    description: "Plastic surgeons are specialized medical doctors in surgery that improve a person’s outlook such as surgery for a birth defect (e.g., cleft palate), or surgery following an injury or the removal of cancer, such as breast implant surgery after breast removal (mastectomy)."
+  },
+  {
+
+    name:"Pulmonologist",
+    description: "A pulmonologist is a medical professional whose expertise falls on pulmonary (lungs) and other respiratory tract illnesses and diseases. These type of doctors have a broad scope of specialization as they can treat almost everything from asthma to tuberculosis."
+  },
+  {
+    name:"Surgeon",
+    description: "A surgeon is a physician trained in performing operations that involve the treatment of injuries, removing infected body parts, and the reconstruction of missing or damaged tissues or organs. Medical doctors who specialize in the surgery of colon/rectum are called as colon and rectal surgeons."
+  },
+  {
+    name:"Urologist",
+    description: "Urologists are doctors who specialized in the diagnosis and treatment of disorders that affect the male and female urinary tract. In addition to that, urologists are also knowledgeable in treating patients with prostate cancer, and other diseases that affect sexual health and fertility."
+  }
+])
