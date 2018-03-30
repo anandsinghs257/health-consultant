@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Specialization Areas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @specialization_areas.each do |specialization_area| %>
+      <tr>
+        <td><%= specialization_area.name %></td>
+        <td><%= specialization_area.description %></td>
+        <td><%= link_to 'Show', specialization_area %></td>
+        <td><%= link_to 'Edit', edit_specialization_area_path(specialization_area) %></td>
+        <td><%= link_to 'Destroy', specialization_area, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Specialization Area', new_specialization_area_path %>

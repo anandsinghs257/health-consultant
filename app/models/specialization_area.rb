@@ -1,0 +1,2 @@
+class SpecializationArea < ApplicationRecord
+end
