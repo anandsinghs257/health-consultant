@@ -89,3 +89,82 @@ specialization_areas = SpecializationArea.create([
     description: "Urologists are doctors who specialized in the diagnosis and treatment of disorders that affect the male and female urinary tract. In addition to that, urologists are also knowledgeable in treating patients with prostate cancer, and other diseases that affect sexual health and fertility."
   }
 ])
+
+
+doctors = Doctor.create([
+  {
+    first_name: "Abhishek", 
+    last_name: "Jain", 
+    address: "Pipliyahana", 
+    city: "Indore", 
+    state: "Madhya Pradesh", 
+    country: "India", 
+    latitude:  22.709221, 
+    longitude: 75.902046, 
+    zipcode: "452016", 
+    contact: "7546587487", 
+    gender: "Male", 
+    age: 40, 
+    about: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+  }, 
+  {
+    first_name: "Anand", 
+    last_name: "Singh", 
+    address: "Mangaliya", 
+    city: "Indore", 
+    state: "Madhya Pradesh", 
+    country: "India", 
+    latitude:  22.814795, 
+    longitude: 75.935097, 
+    zipcode: "453771", 
+    contact: "7546587445", 
+    gender: "Male", 
+    age: 49, 
+    about: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+  }, 
+  {
+    first_name: "Deepesh", 
+    last_name: "Singh", 
+    address: "Juni Indore", 
+    city: "Indore", 
+    state: "Madhya Pradesh", 
+    country: "India", 
+    latitude: 22.711535, 
+    longitude: 75.860105, 
+    zipcode: "452007", 
+    contact: "7546587565", 
+    gender: "Male", 
+    age: 47, 
+    about: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+  }, 
+  {
+    first_name: "Jai", 
+    last_name: "Sharma", 
+    address: "Lokmanya Nagar Indore", 
+    city: "Indore", 
+    state: "Madhya Pradesh", 
+    country: "India", 
+    latitude:  22.694077, 
+    longitude: 75.846859, 
+    zipcode: "452009", 
+    contact: "9046587565", 
+    gender: "Male", 
+    age: 56, 
+    about: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+  }, 
+  {
+    first_name: "Diksha", 
+    last_name: "Shivhare", 
+    address: "Khatiwala Tank", 
+    city: "Indore", 
+    state: "Madhya Pradesh", 
+    country: "India", 
+    latitude:  22.699621, 
+    longitude: 75.859932, 
+    zipcode: "452014", 
+    contact: "9046587565", 
+    gender: "Female", 
+    age: 39, 
+    about: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+  }
+])
