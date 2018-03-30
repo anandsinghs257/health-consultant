@@ -20,4 +20,23 @@
       </div>
     </div>
   </div>
+  <div class="doctors-grid">
+    <h2 class="text-center">Our Top Rated Doctors</h2>
+    <div class="row">
+      <% @doctors.each do |doctor| %>
+        <div class="col-md-4 col-sm-4 col-xs-12">
+          <div class="card doctor-card">
+            <%= image_tag doctor.profile_photo_url, class: "card-img-top" %>
+            <div class="card-body">
+              <h5 class="card-title"><%= doctor.name %></h5>
+              <p class="card-text"><i class="fa fa-map-marker"></i> <%= doctor.full_address %></p>
+              <%= link_to doctor_path(doctor), class: "btn btn-primary" do %>
+                <i class="fa fa-eye"></i> View Details
+              <% end %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </div>

@@ -1,5 +1,6 @@
 .nav-app-header a {color:#fff !important;}
 .search-box {margin-top:5% !important;}
+.doctors-grid {margin-top: 5%;}
 .search-card .form-control, .search-card .btn {border-radius: 0px;}
 @media screen and (max-width:767px) {
 	.search-box {width:100%;}
@@ -7,3 +8,9 @@
 @media screen and (min-width:768px) {
 	.search-box {width:60%;margin:0 auto;}
 }
+.doctor-card img {height:300px;}
+.doctor-card {margin-bottom: 5%;}
+.doctor-about {font-size: 14px;text-align: justify;}
+.doctor-profile-img {height:300px;width:100%;}
+.doctor-items {font-size: 15px;}
+#map {height:350px;width:100%;}

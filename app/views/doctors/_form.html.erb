@@ -47,23 +47,13 @@
   </div>
 
   <div class="field">
-    <%= form.label :latitude %>
-    <%= form.text_field :latitude, id: :doctor_latitude %>
-  </div>
-
-  <div class="field">
-    <%= form.label :longitude %>
-    <%= form.text_field :longitude, id: :doctor_longitude %>
-  </div>
-
-  <div class="field">
     <%= form.label :contact %>
     <%= form.text_field :contact, id: :doctor_contact %>
   </div>
 
   <div class="field">
     <%= form.label :profile_photo %>
-    <%= form.text_field :profile_photo, id: :doctor_profile_photo %>
+    <%= form.file_field :profile_photo, id: :doctor_profile_photo %>
   </div>
 
   <div class="field">
