@@ -21,7 +21,7 @@
       <% @doctors.each do |doctor| %>
         <div class="col-md-4 col-sm-4 col-xs-12">
           <div class="card doctor-card">
-            <%= image_tag doctor.profile_photo_url, class: "card-img-top" %>
+            <%= image_tag doctor.profile_photo_url, class: "card-img-top" if doctor.profile_photo_url.present? %>
             <div class="card-body">
               <h5 class="card-title"><%= doctor.name %></h5>
               <p class="card-text"><i class="fa fa-map-marker"></i> <%= doctor.full_address %></p>
