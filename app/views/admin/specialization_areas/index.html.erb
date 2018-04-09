@@ -16,9 +16,15 @@
           <td><%= specialization_area.name %></td>
           <td><%= specialization_area.description %></td>
           <td>
-            <%= link_to 'Show', specialization_area %>
-            <%= link_to 'Edit', edit_specialization_area_path(specialization_area) %>  
-            <%= link_to 'Destroy', specialization_area, method: :delete, data: { confirm: 'Are you sure?' } %>  
+            <%= link_to admin_specialization_area_path(specialization_area),  class: "btn btn-primary" do %>
+              <i class="fa fa-eye"></i>
+            <% end %>
+            <%= link_to edit_admin_specialization_area_path(specialization_area),  class: "btn btn-warning" do %>
+              <i class="fa fa-pencil"></i>
+            <% end %>
+            <%= link_to admin_specialization_area_path(specialization_area), method: :delete, data: { confirm: 'Are you sure?' },  class: "btn btn-danger" do %>
+              <i class="fa fa-trash"></i>
+            <% end %>     
           </td>
         </tr>
       <% end %>
@@ -27,7 +33,7 @@
 
   <br>
 
-  <%= link_to 'New Specialization Area', new_specialization_area_path %>
+  <%= link_to 'New Specialization Area', new_admin_specialization_area_path %>
 </div>
 <script type="text/javascript">
   $(document).ready(function() {

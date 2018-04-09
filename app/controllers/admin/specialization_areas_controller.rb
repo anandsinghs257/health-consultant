@@ -1,4 +1,4 @@
-class SpecializationAreasController < ApplicationController
+class Admin::SpecializationAreasController < ApplicationController
   before_action :set_specialization_area, only: [:show, :edit, :update, :destroy]
 
   # GET /specialization_areas
@@ -28,7 +28,7 @@ class SpecializationAreasController < ApplicationController
 
     respond_to do |format|
       if @specialization_area.save
-        format.html { redirect_to @specialization_area, notice: 'Specialization area was successfully created.' }
+        format.html { redirect_to admin_specialization_area_path(@specialization_area), notice: 'Specialization area was successfully created.' }
         format.json { render :show, status: :created, location: @specialization_area }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class SpecializationAreasController < ApplicationController
   def update
     respond_to do |format|
       if @specialization_area.update(specialization_area_params)
-        format.html { redirect_to @specialization_area, notice: 'Specialization area was successfully updated.' }
+        format.html { redirect_to admin_specialization_area_path(@specialization_area), notice: 'Specialization area was successfully updated.' }
         format.json { render :show, status: :ok, location: @specialization_area }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class SpecializationAreasController < ApplicationController
   def destroy
     @specialization_area.destroy
     respond_to do |format|
-      format.html { redirect_to specialization_areas_url, notice: 'Specialization area was successfully destroyed.' }
+      format.html { redirect_to admin_specialization_areas_url, notice: 'Specialization area was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

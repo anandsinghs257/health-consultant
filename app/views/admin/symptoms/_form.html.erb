@@ -1,0 +1,32 @@
+<%= form_for ([:admin, @symptom]) do |form| %>
+  <% if @symptom.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@symptom.errors.count, "error") %> prohibited this @symptom from being saved:</h2>
+
+      <ul>
+      <% @symptom.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :symptom_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, id: :symptom_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :specialization_area %>
+    <%= form.number_field :specialization_area_id, id: :symptom_specialization_area %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

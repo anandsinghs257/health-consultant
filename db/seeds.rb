@@ -166,5 +166,77 @@ doctors = Doctor.create([
     gender: "Female", 
     age: 39, 
     about: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+  }, 
+  {
+    first_name: "Abhishek", 
+    last_name: "Jain", 
+    address: "Pipliyahana", 
+    city: "Indore", 
+    state: "Madhya Pradesh", 
+    country: "India", 
+    latitude:  22.709221, 
+    longitude: 75.902046, 
+    zipcode: "452016", 
+    contact: "7546587487", 
+    gender: "Male", 
+    age: 40, 
+    about: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+  },
+  {
+    first_name: "Ameen", 
+    last_name: "Khan", 
+    address: "Jaipur Railway Station, Gopalbari, Jaipur, Rajasthan", 
+    city: "Jaipur", 
+    state: "Rajasthan", 
+    country: "India", 
+    latitude:  26.92028299999999, 
+    longitude: 75.78968099999997, 
+    zipcode: "302006", 
+    contact: "7546587487", 
+    gender: "Male", 
+    age: 40, 
+    about: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+  },
+  {
+    first_name: "Shreya", 
+    last_name: "Vishwakarma", 
+    address: "Maharastra, Link Road, Adarsh Nagar, Andheri West, Mumbai, Maharashtra, India", 
+    city: "Mumbai", 
+    state: "Maharastra", 
+    country: "India", 
+    latitude:  19.143321, 
+    longitude: 72.83212279999998, 
+    zipcode: "400047", 
+    contact: "7546587487", 
+    gender: "Male", 
+    age: 40, 
+    about: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+  },
+  {
+    first_name: "Thomas", 
+    last_name: "Silva", 
+    address: "Shastri Nagar, Bandha Basti, Nahari Ka Naka, Jaipur, Rajasthan, India", 
+    city: "Jaipur", 
+    state: "Rajasthan", 
+    country: "India", 
+    latitude:  26.9354294, 
+    longitude: 75.80856130000006, 
+    zipcode: "302016", 
+    contact: "7546587487", 
+    gender: "Male", 
+    age: 40, 
+    about: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
   }
 ])
+
+
+# Doctor.create(first_name: "Ameen",last_name: "Khan", address: "Jaipur Railway Station, Gopalbari, Jaipur, Rajasthan", city: "Jaipur", state: "Rajasthan", country: "India", latitude: 26.92028299999999, longitude: 75.78968099999997,
+#     zipcode: "302006", contact: "7546587487", gender: "Male", age: 40, about: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.")
+
+# Doctor.create(first_name: "Shreya",last_name: "Vishwakarma", address: "Maharastra, Link Road, Adarsh Nagar, Andheri West, Mumbai, Maharashtra, India", city: "Mumbai", state: "Maharastra", country: "India",latitude:  19.143321, 
+#     longitude: 72.83212279999998, zipcode: "400047", contact: "7546587487", gender: "Male", age: 40, 
+#     about: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.")
+
+# Doctor.create(first_name: "Thomas", last_name: "Silva", address: "Shastri Nagar, Bandha Basti, Nahari Ka Naka, Jaipur, Rajasthan, India", city: "Jaipur", state: "Rajasthan", country: "India", latitude:  26.9354294, 
+#     longitude: 75.80856130000006, zipcode: "302016", contact: "7546587487", gender: "Male",  age: 40, 
+#     about: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.")

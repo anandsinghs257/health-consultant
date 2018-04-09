@@ -1,0 +1,50 @@
+<div class="container">  
+  <p id="notice"><%= notice %></p>
+  <h1>Symptoms</h1>
+  <div class="mb-4 mt-4">
+    <%= form_tag import_admin_symptoms_path, multipart: true do %>
+      <%= file_field_tag :file %>
+      <%= submit_tag "Import CSV" %>
+    <% end %>
+  </div>
+
+  <table class="table table-bordered" id="symptoms">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @symptoms.each do |symptom| %>
+        <tr>
+          <td><%= symptom.name %></td>
+          <td><%= symptom.description %></td>
+          <td>
+            <%= link_to admin_symptom_path(symptom), class: "btn btn-primary" do %>
+              <i class="fa fa-eye"></i>
+            <% end %>
+            <%= link_to edit_admin_symptom_path(symptom), class: "btn btn-warning" do %>
+              <i class="fa fa-pencil"></i>
+            <% end %>
+            <%= link_to admin_symptom_path(symptom), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" do %>
+              <i class="fa fa-trash"></i>
+            <% end %>    
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'New Symptom', new_admin_symptom_path, class: "btn btn-primary" %>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#symptoms').DataTable();
+  });
+</script>
