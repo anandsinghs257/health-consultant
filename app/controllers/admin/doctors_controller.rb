@@ -70,6 +70,8 @@ class Admin::DoctorsController < ApplicationController
     end
 
     def doctor_params
-      params.require(:doctor).permit(:first_name, :last_name, :address, :city, :state, :country, :zipcode, :latitude, :longitude, :contact, :profile_photo, :about, :age, :gender)
+      params.require(:doctor).permit(:first_name, :last_name, :address, :city, :state, :country, :zipcode, :latitude, :longitude, :contact, :profile_photo, :about, :age, :gender, doctor_available_slots_attributes: [:id,:day,:from,:to])
+  
     end
-end
+
+  end

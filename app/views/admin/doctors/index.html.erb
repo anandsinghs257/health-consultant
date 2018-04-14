@@ -21,7 +21,7 @@
     <tbody>
       <% @doctors.each do |doctor| %>
         <tr>
-          <td class="doctor-image-td"><%= image_tag doctor.profile_photo_url %></td>
+          <td class="doctor-image-td"><%= image_tag doctor.profile_photo%></td>
           <td><%= doctor.name %></td>
           <td><%= doctor.full_address %></td>
           <td><%= doctor.contact %></td>

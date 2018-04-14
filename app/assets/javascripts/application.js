@@ -14,6 +14,9 @@
 //= require jquery_ujs
 //= require popper
 //= require bootstrap
+//= require moment
+//= require tempusdominus-bootstrap-4.js
 //= require jquery.dataTables.min
 //= require dataTables.bootstrap4.min
+//= require cocoon
 //= require ckeditor/init

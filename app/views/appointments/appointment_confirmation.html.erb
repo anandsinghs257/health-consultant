@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="mt-5"></div>
+    <%= flash[:notice] %>
+    <div class="col-md-8 offset-md-2">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Patient : <%= @appointment.patient.name %></h5>
+          <h5 class="card-title">Doctor  : <%= @appointment.doctor.name %></h5>
+          <h5 class="card-title">Date    : <%= @appointment.appointment_datetime.strftime("%A, %d %B %Y %H:%M %p") %></h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180414162748) do
+ActiveRecord::Schema.define(version: 20180414221607) do
+
+  create_table "afternoon_slots", force: :cascade do |t|
+    t.string "time_for"
+    t.string "time_to"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "appointments", force: :cascade do |t|
     t.integer "doctor_id"
@@ -20,6 +27,16 @@ ActiveRecord::Schema.define(version: 20180414162748) do
     t.datetime "updated_at", null: false
     t.index ["doctor_id"], name: "index_appointments_on_doctor_id"
     t.index ["patient_id"], name: "index_appointments_on_patient_id"
+  end
+
+  create_table "doctor_available_slots", force: :cascade do |t|
+    t.string "day"
+    t.time "from"
+    t.time "to"
+    t.integer "doctor_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["doctor_id"], name: "index_doctor_available_slots_on_doctor_id"
   end
 
   create_table "doctor_specializations", force: :cascade do |t|
@@ -46,6 +63,21 @@ ActiveRecord::Schema.define(version: 20180414162748) do
     t.text "about"
     t.integer "age"
     t.string "gender"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "total_experience_years"
+  end
+
+  create_table "evening_slots", force: :cascade do |t|
+    t.string "time_for"
+    t.string "time_to"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "morning_slots", force: :cascade do |t|
+    t.string "time_for"
+    t.string "time_to"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

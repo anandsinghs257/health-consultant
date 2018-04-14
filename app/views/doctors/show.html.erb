@@ -4,7 +4,7 @@
   <hr class="my-4">
   <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
   <p class="lead">
-    <a class="btn btn-primary btn-lg" href="#" role="button">Make an Appointment</a>
+    <%= link_to "Make an Appointment", appointment_new_path(doctor_id: @doctor.id), class: "btn btn-primary btn-lg" %>
   </p>
 </div>
 <div class="container">
@@ -18,9 +18,15 @@
             </div>
             <div class="col-md-7">
               <h3 class="card-title"><%= @doctor.name %></h3>
-              <p class="card-text doctor-about"><%= @doctor.about %></p>
+              <p class="card-text doctor-about"><%= @doctor.about.html_safe%></p>
               <h5 class="doctor-items"><i class="fa fa-phone"></i> <%= @doctor.contact %></h5>
               <h5 class="doctor-items"><i class="fa fa-map-marker"></i> <%= @doctor.full_address %></h5>
+              <h5 class="doctor-items"><i class="fa fa-list"></i>
+                <% @doctor.specialization_areas.map {|sa| sa.name}.flatten.each do |specialization| %>
+                  <%= specialization %>,   
+                <% end %>
+              </h5>
+              <h5 class="card-title"><%= @doctor.total_experience_years %> Year Experience</h5>
             </div>
           </div>
         </div>
@@ -31,10 +37,6 @@
     </div>
   </div>
 </div>
-
-<%= link_to 'Edit', edit_doctor_path(@doctor) %> |
-<%= link_to 'Back', doctors_path %>
-
 <script>
   function initMap() {
     var doctor_address = {lat: <%= @doctor.latitude %>, lng: <%= @doctor.longitude %>};

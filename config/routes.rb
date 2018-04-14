@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   
   resources :doctors, only: [:show, :index]
+  # resources :appointments do 
+  # end
   root to: 'home#index'
 
   namespace :admin do 
@@ -21,5 +23,8 @@ Rails.application.routes.draw do
   get '/doctor-search-result' => "home#doctor_search_result"
   get '/advanced-search' => "home#advanced_search"
 
+  get '/appointment-new' => "appointments#new_appointment"
+  post 'appointments/create_appointment'
+  get '/confirm-appointment' => "appointments#appointment_confirmation"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
