@@ -13,14 +13,14 @@ class Doctor < ApplicationRecord
   has_many :doctor_available_slots
   accepts_nested_attributes_for :doctor_available_slots, reject_if: :all_blank, allow_destroy: true
 
- has_many :doctor_available_morning_slots
- accepts_nested_attributes_for :doctor_available_morning_slots, reject_if: :all_blank, allow_destroy: true
+  has_many :morning_slots
+  accepts_nested_attributes_for :morning_slots, reject_if: :all_blank, allow_destroy: true
 
- has_many :doctor_available_afternoon_slots
- accepts_nested_attributes_for :doctor_available_afternoon_slots, reject_if: :all_blank, allow_destroy: true
+  has_many :afternoon_slots
+  accepts_nested_attributes_for :afternoon_slots, reject_if: :all_blank, allow_destroy: true
 
- has_many :doctor_available_evening_slots
- accepts_nested_attributes_for :doctor_available_evening_slots, reject_if: :all_blank, allow_destroy: true
+  has_many :evening_slots
+  accepts_nested_attributes_for :evening_slots, reject_if: :all_blank, allow_destroy: true
 
 
 

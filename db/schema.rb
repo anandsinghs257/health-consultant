@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180414221607) do
+ActiveRecord::Schema.define(version: 20180417151702) do
 
   create_table "afternoon_slots", force: :cascade do |t|
-    t.string "time_for"
-    t.string "time_to"
+    t.time "from"
+    t.time "to"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "doctor_id"
   end
 
   create_table "appointments", force: :cascade do |t|
@@ -69,17 +70,19 @@ ActiveRecord::Schema.define(version: 20180414221607) do
   end
 
   create_table "evening_slots", force: :cascade do |t|
-    t.string "time_for"
-    t.string "time_to"
+    t.time "from"
+    t.time "to"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "doctor_id"
   end
 
   create_table "morning_slots", force: :cascade do |t|
-    t.string "time_for"
-    t.string "time_to"
+    t.time "from"
+    t.time "to"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "doctor_id"
   end
 
   create_table "patients", force: :cascade do |t|

@@ -2,24 +2,18 @@
   <div class="container">  
     <div class="row">
       <div class="col-md-4">
-        <div class="form-group">
-          <%= f.label :day %>
-          <%= f.text_field :day, class: "form-control" %>
-        </div>
-      </div>
-      <div class="col-md-3">
         <div class="form-group time-select">
           <%= f.label :from %><br>
           <%= f.time_select :from, class: "form-control" %>
         </div>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-4">
         <div class="form-group time-select">
           <%= f.label :to %><br>
           <%= f.time_select :to, class: "form-control" %>
         </div>
       </div>
-      <div class="col-md-2">
+      <div class="col-md-4">
         <div class="mt-4">
           <%= link_to_remove_association "Remove Slot", f, class: "btn btn-danger" %>
         </div>
