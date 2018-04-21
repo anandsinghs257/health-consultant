@@ -32,13 +32,50 @@
               </h5>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="card mt-4 mb-4">
+        <div class="card-header">
+          <h4 class="card-title">Available Slots for morning</h4>
+        </div>
+        <div class="card-body">
           <div class="row">
-            <!-- <h5 class="text-center">Available slots</h5><br> -->
-            <% if @doctor.doctor_available_slots.present? %>
-              <% @doctor.doctor_available_slots.each do |slot| %>
+            <% if @doctor.morning_slots.present? %>
+              <% @doctor.morning_slots.each do |slot| %>
                 <div class="mt-2">  
-                  <h6 class=""><%= slot.day %></h6>
-                  <h2><span class="badge badge-secondary"><%= slot.from.strftime("%H:%M %p") %> to <%= slot.to.strftime("%H:%M %p") %></span></h2>
+                  <h5 style="margin-left:20px;"><span class="badge badge-secondary"><%= slot.from.strftime("%H:%M %p") %> to <%= slot.to.strftime("%H:%M %p") %></span></h5>
+                </div>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="card mt-4 mb-4">
+        <div class="card-header">
+          <h4 class="card-title">Available slots for afternoon</h4>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <% if @doctor.evening_slots.present? %>
+              <% @doctor.evening_slots.each do |slot| %>
+                <div class="mt-2">  
+                  <h5 style="margin-left:20px;"><span class="badge badge-secondary"><%= slot.from.strftime("%H:%M %p") %> to <%= slot.to.strftime("%H:%M %p") %></span></h5>
+                </div>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="card mt-4 mb-4">
+        <div class="card-header">
+          <h4 class="card-title">Available slots for evening</h4>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <% if @doctor.evening_slots.present? %>
+              <% @doctor.evening_slots.each do |slot| %>
+                <div class="mt-2">  
+                  <h5 style="margin-left:20px;"><span class="badge badge-secondary"><%= slot.from.strftime("%H:%M %p") %> to <%= slot.to.strftime("%H:%M %p") %></span></h5>
                 </div>
               <% end %>
             <% end %>

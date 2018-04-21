@@ -2,9 +2,10 @@
   <div class="row">
     <div class="col-md-8 offset-md-2">
       <div class="mt-5">
+        <p class="lead">Please provide your details to confirm your appointment from <%= @slot.from.strftime("%H:%M %p") %> to <%= @slot.to.strftime("%H:%M %p") %> with <b><%= @doctor.name %></b></p>
         <div class="card">
           <div class="card-header">
-            <h3>Make an Appointment</h3>
+            <h3>Personal Information</h3>
           </div>
           <div class="card-body">
             <%= form_for :new_appointment, url: :appointments_create_appointment, method: :post do |f| %>
@@ -40,14 +41,6 @@
                   <div class="form-group">
                     <%= f.label :contact %>
                     <%= f.text_field :contact, class: "form-control" %>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-sm-6">
-                  <div class="form-group">
-                    <%= f.label :Appointment_date_and_time %>
-                    <%= f.text_field :appointment_datetime, class: "form-control datetimepicker-input", id: "datetimepicker", data: {toggle: "datetimepicker", target: "#datetimepicker"} %>
                   </div>
                 </div>
               </div>

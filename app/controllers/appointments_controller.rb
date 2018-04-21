@@ -2,6 +2,13 @@ class AppointmentsController < ApplicationController
   
   def new_appointment
     @doctor = Doctor.find(params[:doctor_id])
+    if params[:morning_slot_id].present?
+      @slot = MorningSlot.find(params[:morning_slot_id])
+    elsif params[:noon_slot_id].present?
+      @slot = AfternoonSlot.find(params[:noon_slot_id])
+    elsif params[:evening_slot_id].present?
+      @slot = EveningSlot.find(params[:evening_slot_id])
+    end
   end
 
   def create_appointment

@@ -1,8 +1,7 @@
 <div class="jumbotron">
   <h1 class="display-4">Get your doctor!</h1>
-  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  <p class="lead">To get appointment with <%= @doctor.name %> please select on of the available slots and click on it.</p>
   <hr class="my-4">
-  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
   <p class="lead">
     <%= link_to "Make an Appointment", appointment_new_path(doctor_id: @doctor.id), class: "btn btn-primary btn-lg" %>
   </p>
@@ -31,9 +30,71 @@
           </div>
         </div>
       </div>
+      <div class="card mt-4 mb-4">
+        <div class="card-header">
+          <h4 class="card-title">Available Slots for morning</h4>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <% if @doctor.morning_slots.present? %>
+              <% @doctor.morning_slots.each do |slot| %>
+                <div class="mt-2">  
+                  <%= link_to appointment_new_path(doctor_id: @doctor.id, morning_slot_id: slot.id), class: "btn btn-primary", style: "margin-left:20px;" do %>
+                    <%= slot.from.strftime("%H:%M %p") %> to <%= slot.to.strftime("%H:%M %p") %>
+                  <% end %>
+                </div>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="card mt-4 mb-4">
+        <div class="card-header">
+          <h4 class="card-title">Available slots for afternoon</h4>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <% if @doctor.afternoon_slots.present? %>
+              <% @doctor.afternoon_slots.each do |slot| %>
+                <div class="mt-2">  
+                  <%= link_to appointment_new_path(doctor_id: @doctor.id, noon_slot_id: slot.id), class: "btn btn-primary", style: "margin-left:20px;" do %>
+                    <%= slot.from.strftime("%H:%M %p") %> to <%= slot.to.strftime("%H:%M %p") %>
+                  <% end %>
+                </div>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="card mt-4 mb-4">
+        <div class="card-header">
+          <h4 class="card-title">Available slots for evening</h4>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <% if @doctor.evening_slots.present? %>
+              <% @doctor.evening_slots.each do |slot| %>
+                <div class="mt-2">  
+                  <%= link_to appointment_new_path(doctor_id: @doctor.id, evening_slot_id: slot.id), class: "btn btn-primary", style: "margin-left:20px;" do %>
+                    <%= slot.from.strftime("%H:%M %p") %> to <%= slot.to.strftime("%H:%M %p") %>
+                  <% end %>
+                </div>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="col-md-4 col-xs-12 col-sm-5">
       <div id="map"></div>
+      <div class="card mt-4">
+        <div class="card-header">
+          <h4 class="card-title">Appointment Instructions</h4>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Please click on one of the available slot timing you want. </p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
