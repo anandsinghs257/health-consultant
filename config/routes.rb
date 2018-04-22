@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
   resources :doctors, only: [:show, :index]
+  resources :subscriptions
   # resources :appointments do 
   # end
   root to: 'home#index'
@@ -22,6 +23,7 @@ Rails.application.routes.draw do
   
   get '/doctor-search-result' => "home#doctor_search_result"
   get '/advanced-search' => "home#advanced_search"
+  get "home/index" => 'home#index'
 
   get '/appointment-new' => "appointments#new_appointment"
   post 'appointments/create_appointment'

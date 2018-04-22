@@ -74,3 +74,4 @@ end
 gem 'bootstrap4-datetime-picker-rails'
 gem 'momentjs-rails'
 gem "cocoon"
+gem 'kaminari'

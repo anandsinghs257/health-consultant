@@ -2,6 +2,10 @@ class HomeController < ApplicationController
   
   def index
     @doctors = Doctor.last(6)
+      respond_to do |format|
+      format.html
+      format.js
+     end 
   end
 
   def doctor_search_result

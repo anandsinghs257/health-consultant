@@ -1,4 +1,7 @@
 class Doctor < ApplicationRecord
+
+  paginates_per 5
+
   has_many :doctor_specializations
   has_many :specialization_areas, through: :doctor_specializations
 
