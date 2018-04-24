@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  devise_for :doctors
   resources :doctors, only: [:show, :index]
   resources :subscriptions
   # resources :appointments do 

@@ -1,5 +1,6 @@
 class DoctorsController < ApplicationController
   before_action :set_doctor, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_doctor!
 
   # GET /doctors
   # GET /doctors.json
@@ -13,7 +14,7 @@ class DoctorsController < ApplicationController
   end
 
   # GET /doctors/new
-  def new
+  def new 
     @doctor = Doctor.new
   end
 

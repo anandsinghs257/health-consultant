@@ -95,6 +95,8 @@ doctors = Doctor.create([
   {
     first_name: "Abhishek", 
     last_name: "Jain", 
+    email: "aj@mail.com",
+    password: "111111",
     address: "Pipliyahana", 
     city: "Indore", 
     state: "Madhya Pradesh", 
@@ -110,6 +112,8 @@ doctors = Doctor.create([
   {
     first_name: "Anand", 
     last_name: "Singh", 
+    email: "as@mail.com",
+    password: "111111",
     address: "Mangaliya", 
     city: "Indore", 
     state: "Madhya Pradesh", 
@@ -125,6 +129,8 @@ doctors = Doctor.create([
   {
     first_name: "Deepesh", 
     last_name: "Singh", 
+    email: "dss@mail.com",
+    password: "111111",
     address: "Juni Indore", 
     city: "Indore", 
     state: "Madhya Pradesh", 
@@ -140,6 +146,8 @@ doctors = Doctor.create([
   {
     first_name: "Jai", 
     last_name: "Sharma", 
+    email: "js@mail.com",
+    password: "111111",
     address: "Lokmanya Nagar Indore", 
     city: "Indore", 
     state: "Madhya Pradesh", 
@@ -155,6 +163,8 @@ doctors = Doctor.create([
   {
     first_name: "Diksha", 
     last_name: "Shivhare", 
+    email: "ds@mail.com",
+    password: "111111",
     address: "Khatiwala Tank", 
     city: "Indore", 
     state: "Madhya Pradesh", 
@@ -170,6 +180,8 @@ doctors = Doctor.create([
   {
     first_name: "Abhishek", 
     last_name: "Jain", 
+    email: "aj@mail.com",
+    password: "111111",
     address: "Pipliyahana", 
     city: "Indore", 
     state: "Madhya Pradesh", 
@@ -185,6 +197,8 @@ doctors = Doctor.create([
   {
     first_name: "Ameen", 
     last_name: "Khan", 
+    email: "ak@mail.com",
+    password: "111111",
     address: "Jaipur Railway Station, Gopalbari, Jaipur, Rajasthan", 
     city: "Jaipur", 
     state: "Rajasthan", 
@@ -200,6 +214,8 @@ doctors = Doctor.create([
   {
     first_name: "Shreya", 
     last_name: "Vishwakarma", 
+    email: "sv@mail.com",
+    password: "111111",
     address: "Maharastra, Link Road, Adarsh Nagar, Andheri West, Mumbai, Maharashtra, India", 
     city: "Mumbai", 
     state: "Maharastra", 
@@ -214,7 +230,9 @@ doctors = Doctor.create([
   },
   {
     first_name: "Thomas", 
-    last_name: "Silva", 
+    last_name: "Silva",
+    email: "ts@mail.com",
+    password: "111111", 
     address: "Shastri Nagar, Bandha Basti, Nahari Ka Naka, Jaipur, Rajasthan, India", 
     city: "Jaipur", 
     state: "Rajasthan", 
