@@ -14,7 +14,7 @@
             </div>
             <div class="col-md-7">
               <h3 class="card-title"><%= @doctor.name %></h3>
-              <p class="card-text doctor-about"><%= @doctor.about.html_safe%></p>
+              <p class="card-text doctor-about"><%= @doctor.about%></p>
               <h5 class="doctor-items"><i class="fa fa-phone"></i> <%= @doctor.contact %></h5>
               <h5 class="doctor-items"><i class="fa fa-map-marker"></i> <%= @doctor.full_address %></h5>
               <h5 class="doctor-items"><i class="fa fa-list"></i>

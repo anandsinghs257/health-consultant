@@ -10,36 +10,40 @@
     <ul class="navbar-nav mr-auto">
 
 
-      <li class="nav-item" style="margin-left:20px;margin-top:8px;">
+      <li class="nav-item" style="margin-left:20px;margin-top:1px;">
         <%= link_to 'Home', root_path%>
       </li>
-      <li class="nav-item" style="margin-left:20px;margin-top:8px;">
+      <li class="nav-item" style="margin-left:20px;margin-top:1px;">
         <%= link_to 'Book an appointment', doctors_path%>
       </li>
-      <li class="nav-item" style="margin-left:20px;">
-        <a class="nav-link" href="#">About us</a>
-      </li>
-      <li class="nav-item" style="margin-left:20px;">
-        <a class="nav-link" href="#">Contact</a>
-      </li>
+      
 
-      <div style="margin-left: 400px;margin-top:8px;">
+      <li class="nav-item" style="margin-left:20px;margin-top:1px;">
+        <%= link_to 'contact us', home_contact_us_path%>
+      </li>
+      
+      <% if doctor_signed_in? %>
+    <li style="margin-left:550px;margin-top:1px; color:white;">
+       <%= current_doctor.email%>
+    </li>
+      <div style="margin-left: 10px;margin-top:0px;">
        <li class="nav-item">
-         <%= link_to('Login / Signup', new_doctor_session_path)  %>  
+         <%= link_to('Logout', destroy_doctor_session_path, method: :delete) %>   
        </li> 
+
      </div>
 
-
-     <div style="margin-left: 20px;margin-top:-10px;">
+     <% else %>
+     <div style="margin-left: 570px;margin-top:-10px;">
        <li class="nav-item">
         <a class="nav-link" href="#">
-          <%= link_to('Logout', destroy_doctor_session_path, method: :delete) %>   
-        </a>
-      </li> 
-    </div>
+         <%= link_to('Login / Signup', new_doctor_session_path)  %>  
+         
+       </a>
+     </li> 
+   </div>
+   <% end %>
 
-
-  </ul>
+ </ul>
 </div>
 </nav>
-

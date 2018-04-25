@@ -25,6 +25,7 @@ Rails.application.routes.draw do
   get '/doctor-search-result' => "home#doctor_search_result"
   get '/advanced-search' => "home#advanced_search"
   get "home/index" => 'home#index'
+  get  'home/contact_us'
 
   get '/appointment-new' => "appointments#new_appointment"
   post 'appointments/create_appointment'
